@@ -13,3 +13,5 @@
 *.Rout
 
 data/
+
+*.Rproj
