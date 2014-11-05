@@ -1,3 +1,5 @@
 library(knitr)
 
-knit2html(input='poster.Rmd', output='poster.html')
+setwd('results')
+
+knit2html(input='../scripts/poster.Rmd', output='poster.html')
