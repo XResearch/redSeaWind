@@ -10,6 +10,6 @@ ksaOil<- data.frame(y=1965:2013, p=c(2219,  2615,  2825,  3081,  3262,	3851,	482
 mix<- data.frame(type=c("Hydrocarbons","Nuclear","Solar","Wind","Geothermal","Waste"),amount=c(60,17,41,9,1,3))
 
 # time series data for 3 locations
-load("dscTs.RData")
+load("data/dscTs.RData")
 
-save.image(file="poster.RData")
+save.image(file="data/poster.RData")
