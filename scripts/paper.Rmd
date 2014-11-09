@@ -1,0 +1,80 @@
+---
+title: "Red Sea Offshore Wind Energy Potential"
+author: "Andrew Yip, Denis Dreano"
+date: "Thursday, November 06, 2014"
+output: html_document
+bibliography: paper.bib
+---
+
+# Abstract
+
+To address the energy needs of a growing population in a sustainable way, Saudi Arabia has set ambitious objectives to deploy renewable energy: by 2032, 45% (according to KACARE) of the energy mix will come from renewable sources. Wind energy is expected to contribute over 8% of the mix. Currently, wind initiatives investigate onshore wind power. Offshore locations, on the other hand, while not taking up land, offer opportunities with more persistent and higher speed winds near major urban centers. However, offshore wind farms require large-scale deployment to be economically interesting. Installation and maintenance at sea also present technical difficulties. In light of these financial and technical challenges, is offshore wind a viable source of energy for Saudi Arabia? In this study, we select sites according to energy potential and their proximity to demand. We make an economic and environmental assessment of offshore wind farms at the selected sites. Finally, we compare offshore wind energy with other forms of electricity production, and define conditions under which offshore wind energy is economically viable.
+
+# Introduction
+
+Despite the governmental goal to deploy 9GW of wind power capacity by 2032, Saudi Arabia’s wind potential has been relatively little studied. Prior research focused on time-series measured at weather stations at major cities [@rehman_wind_2003]. Some coastal locations have been studied using meteorological time series [@rehman_assessment_2004]. However, the wind power potential has not yet been characterized in most parts of Saudi Arabia, especially at offshore locations.
+
+Offshore locations provide better wind resource for power generation. The winds are usually stronger and more constant than overland [@manwell_wind_2009]. However, installation cost of offshore wind farms are higher than onshore ones. Is the Red Sea wind resource high enough to justify this increased cost?
+
+In this study, we evaluate wind resource off the Red Sea coast of Saudi Arabia. In the next section, we describe the datasets we use. Then, we explain how we select three regions with best wind potential. The bathymetry and wind characteristics are then studied for the selected areas. We demonstrate that the wind power potential at these locations could justify the deployment of offshore wind farms. 
+
+# Data
+
+The study employs results of a simulation using the Weather Research and Forecasting model (WRF) widely used by the wind industry [@skamarock_william_description_2008]. Our data is the result of a simulation run on a 10km resolution grid over the domain represented in [fig 1]. The model constructed the wind field at 10m above sea level. The results of the simulation were recorded every 3 hours from Jan 1, 2000 to Jan 1, 2014. This is the first time, to our knowledge, that the results of a regional wind simulation are used to assess the wind resource in Saudi Arabia.
+
+To validate our data, we compare it to the offshore wind satellite dataset published by the National Renewable Energy Laboratory (NREL), a United States (US) governmental research institute. The NREL dataset provides 25km resolution estimates of monthly and yearly wind power density at 10m and 50m above sea level [@openei]. The data has been derived from 4 years of satellite measurements from the NASA’s QuikSCAT scattermeter.
+
+ETOPO1, the 1-minute arc global relief model from the National Oceanic and Atmospheric Administration (NOAA) of the US is used to evaluate the terrain suitability of potential locations of wind farms [@amante_c._and_b._w._eakins_etopo1_2009]. Global maps and satellite imageries from Bing were also employed to detect coral reefs. 
+
+# Method and Results
+
+It is necessary to estimate the wind speed at 50m and 80m above sea level. Indeed, the industry standard to classify wind resource requires wind power density at 50m. Furthermore, most modern offshore wind turbines have their hubs, the part to which the blades are attached, at 80m. To estimate the wind speed at higher altitude, we use the power law, an empirical relation commonly used in the wind industry [@manwell_wind_2009], according to which: $$U(80) = U(10) (\frac{80}{10}) ^{\alpha}$$, where $\alpha$ is a constant that depends on the roughness of the surface. For the sea it is estimated at 0.11 [cite roughness table]. 
+
+Average wind power density represents the abundance of wind resource for a location. The wind power density has a cubic relation to wind speed. The wind power density (the amount of wind power per unit swept area of blade) is: $$P(U) = \frac{1}{2} \rho U^3$$, where $\rho$ is the air density ($1.225kg/m^3$ at standard condition) and $U$ the wind speed. The central tendency of 14-year long hourly wind power density time series is then averaged to give a central tendency of wind power over the Red Sea for each grid point.
+	
+To better visualize our data and slect the best sites for wind farm implementation, we use the NREL wind classification. The classification of the Red Sea is shown in [fig]. The same classification was done using the NREL data where similar results were obtained, validating the simulated data. The Red Sea presents a wide range of wind power classes. Off the Saudi coast, the most powerful wind can be found south of the Aqaba Gulf by the Strait of Tiran. Good wind resources can also be found offshore Yanbu and south of Jeddah. 
+
+Because the power output of a wind turbine is not proportional to wind power density, it is necessary to simulate the former to choose the best locations. For this study, we considered the Siemens SWT3.6MW-107m, a widely employed wind turbine in recent offshore farms [@_european_2014]. From the simulated data, we compute the average capacity factor (CF), which is the ratio between the average power yield of the turbine and its maximum output capacity. The CF provides a good summary of the expected performance of a wind turbine at a given location, and allows for comparison between different wind farms. Three coastal regions of Saudi Arabia with CF above 35% are identified as viable locations for offshore wind farm in [fig].
+
+The bathymetry, the depth of the sea, is an important constraint to offshore wind farm deployment. The topographic data shows that Red Sea depth increases abruptly from shore in the regions with good wind potential. Only a narrow band close to the shoreline is shallower than 30m, the maximum practical depth for wind turbine installation with the current technology.
+
+One representative location in each of the three regions is then selected for detailed characterization of the wind resource. The locations are selected according to the abundance of wind resource, favorable terrain, and distance to shore and urban center. To evaluate the presence of coral reefs, we inspected the regions using satellite images provided by the commercial map service Bing. The selected locations are shown in [fig].
+
+The diurnal variation [fig], the variation through out the hours of day, indicates the wind resources at the three sites have distinct behaviors. Yanbu and Jeddah show higher resource at night while the gulf of Aqaba shows peak resource past mid-night. The relatively narrower variation of daily production at Jeddah shows promising production characteristics since persistent and steady electricity generation is desirable for utilities application.
+
+Monthly variation [fig] of the wind resources at all three sites shows coincidence of high resource with peak demand in the summer. The three sites follow similar patterns through the months of the year. 
+
+# Applications
+
+The international community needs renewable alternatives to fossil fuel for achieving global energy security and mitigating climate change. Electricity generation accounts for 26% of global $CO_2$ emissions. With over 2000 turbines installed and producing 6500 MW in 69 wind farms spanning 11 European countries, offshore wind power is a promising alternative. 
+
+Saudi Arabia faces unique challenges towards sustainable electricity production. With 266 billion barrels proven oil reserve producing at 11.6 million bbl/d, Saudi Arabia is believed to have 62 years of oil remaining at current production capacity. With a growing domestic energy demand, Saudi Arabia expects to consume 70% of oil production at current production capacity in 2028, a hefty increase from 30% in 2010. Heavy reliance on fossil fuel also makes the country top 14 in $CO_2$ emission per capita, well above world average. In light of these economic and environmental challenges, the Saudi government has plans to procure half of its electricity production from renewable energy by 2032, 17% of which is from wind energy. 
+
+Based on our research, we illustrate the economic viability and sustainability of an offshore wind farm along the Red Sea coast, south of Jeddah. We analyze the expected economic and environmental benefits of the wind farm and point to directions for further investigation.
+
+# Model wind farm description 
+
+We locate the proposed wind farm at $(39.73E, 20.21N)$, 134km south of Jeddah, the economic center of Western Saudi Arabia [fig]. It has wind power potential at 35.7% mean capacity factor and is within a range of 10km from shore. The median depth of the site is 30m [figure], which is suitable for cost-effective implementation [ref]. Satellite images visually confirm the area is mostly free of coral reefs. Its proximity to demand center, favorable terrain, and high wind power potential make the proposed location a good pilot.
+
+The proposed wind farm is modeled after the Gunfleet Sands I/II farms situated in the United Kingdom. This choice has been made for its recent construction date (2010), comparable depths to our choice location (7 to 15m), and distance to shore (7km). The wind farm features 48 Siemens SWT-3.6MW-107m turbines, for a total maximum capacity of 172MW, over an area of 17.5km2. The expected lifetime of the wind farm is 25 years.
+
+We estimate the energy production of the farm over its lifetime as follows: $$Lifetime production = (maximum capacity) * (lifetime) * (capacity factor) * (availability) * (365.25 days) * (24 hours)$$
+The average availability of an offshore wind turbine, the fraction of time it is operational, is 98% . Overall, the proposed wind farm could produce 13200GWh over its lifetime, or, on average, over 529GWh a year. At 8100kWh yearly electricity demand per capita, the proposed wind farm cover the electricity needs of over 65000 individuals.
+
+The cost of electricity production has two components: capital costs, and operation and maintenance costs (O&M). Capital costs are one-time expenses to set up the wind farm. They include the costs of: preliminary studies, purchasing turbines, foundations, cables, and the installation at sea. Capital costs for offshore wind farms are very dependent on the project. As an estimate, we take the capital cost of Gunfleet Sands at approximately 664 million USD. O&M costs are the expenses necessary to operate the wind farm and maintain the equipments. For offshore wind farms, theses costs can be as high as 23% of the capital cost; alternatively, it is estimated at 17USD/MWh by the European Wind Energy Association (EWEA). We found that both estimates of O&M costs are very close (15 USD/MWh). The cost of energy production for the wind farm would therefore be 65USD/MWh.
+
+# Positive impacts of the wind farm
+
+Offshore wind power can mitigate the growing share of the national oil production that is consumed domestically. With an efficiency of 40%, the cost of energy from an oil-fired power plant is approximately 150USD/MWh based on international prices at 100USD/bbl. This makes our proposed wind farm 57% more cost-effective than oil-fired power plants in Saudi Arabia.
+
+The wind farm would also benefit Saudi Arabia environmentally by eliminating 442 ktons of $CO_2$ emission per year (we take for reference the emissions per MWh of the Shoaiba oil-fired desalination-power plant located 120km south of Jeddah). This is equivalent to $CO_2$ emission of around 40000 cars. Our proposed wind farm would also contribute to improving air quality in Jeddah as suggested by a study on the environmental effects of the Shoaiba plant [@alseroury_air_2011].
+
+# Future investigations
+
+In this study, we characterize potential sites for offshore wind farms on the Saudi Red Sea coast. Using the results of simulations of industrial standard, we computed wind statistics and created wind resource map for the Red Sea. Three regions of high wind potential are identified: around the Strait of Tiran, offshore Yanbu, and south of Jeddah. Available topographic data is used to identify potential wind farms location, and the diurnal, and seasonal of the wind resource in reference of a wide-employed turbine are analyzed.
+
+We also showcase that Offshore wind power is a viable source of renewable energy for Saudi Arabia. We computed the capital and operating cost of a model wind farm and quantified its economic and environmental benefits. We showed that such an installation would mitigate rising domestic oil consumption and $CO_2$ emission. Based on this initial study, we can further investigate the two other identified locations of high wind power potential in the Red Sea. 
+
+These conclusions require additional studies for validation. In situ measurements such as one from a fixed buoy with higher temporal resolution at 10 minutes are essential for operational understanding of wind characteristics of a site. A more precise cost estimate of an offshore wind farm project involves a multitude of parameters such as the nature and relief of the sea floor, the price of the turbines and foundations, the renting of an offshore installation fleet, the weather during installation, etc. .
+
+Opportunities await for wind energy in the Red Sea. As offshore wind energy is maturing in Europe and taking off in the United States and China, turbines of higher efficiency are in development and price-per-MWh is expected to drop. With the recent governmental announcement of wind energy procurement at 9GW by 2032, this study serves as a first step in demonstrating sustainable and beneficial offshore wind power for Saudi Arabia.
