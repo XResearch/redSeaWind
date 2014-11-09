@@ -1,4 +1,4 @@
 redSeaWind
 ==========
 
-Dow Challenge Competition entry for Offshore Wind Resource Assessment.
+Offshore Wind Resource Assessment for the Red Sea via regional model simulation.
